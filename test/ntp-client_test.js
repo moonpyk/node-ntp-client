@@ -33,15 +33,17 @@
 
         ntpClient.getNetworkTime(ntpClient.defaultNtpServer, ntpClient.defaultNtpPort, function (err, date) {
             var now = new Date();
+
+            console.log();
+            console.log("System reported : %s", now);
+
             test.ok(err === null);
             test.ok(date !== null);
 
-            test.equal(now.getDate(), date.getDate()); // I'm pretty sure the date things will be OK
-            test.equal(now.getMonth(), date.getMonth());
-            test.equal(now.getYear(), date.getYear());
+            console.log("NTP Reported : %s", date);
 
-            // For the hours and minute parts, really depends if testing machine is synched
-            test.equal(now.getHours(), date.getHours());
+            // I won't test returned datetime against the system datetime
+            // this is the whole purpose of NTP : putting clocks in sync.
         });
 
         // I'm pretty sure there is no NTP Server listening at google.com
