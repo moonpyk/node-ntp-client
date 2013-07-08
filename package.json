@@ -23,7 +23,7 @@
         "node": ">= 0.8.0"
     },
     "scripts": {
-        "test": "grunt nodeunit"
+        "test": "grunt jshint nodeunit"
     },
     "devDependencies": {
         "grunt-contrib-jshint": "~0.6.0",

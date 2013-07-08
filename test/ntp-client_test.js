@@ -47,14 +47,15 @@
             test.done();
         });
 
-        exports.invalidNTPServer = function (test) {
-            // I'm pretty sure there is no NTP Server listening at google.com
-            ntpClient.getNetworkTime("google.com", 123, function (err, date) {
-                test.ok(err !== null);
-                test.ok(date === null);
-                test.equal(err, "Timeout waiting for NTP response.");
-                test.done();
-            });
-        };
+    };
+
+    exports.invalidNTPServer = function (test) {
+        // I'm pretty sure there is no NTP Server listening at google.com
+        ntpClient.getNetworkTime("google.com", 123, function (err, date) {
+            test.ok(err !== null);
+            test.ok(date === null);
+            test.equal(err, "Timeout waiting for NTP response.");
+            test.done();
+        });
     };
 }(exports));
