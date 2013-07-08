@@ -28,7 +28,7 @@
         done();
     };
 
-    exports.works = function (test) {
+    exports.validNTPServer = function (test) {
         ntpClient.ntpReplyTimeout = 5000; // Reducing timeout to avoid warnings.
 
         ntpClient.getNetworkTime(ntpClient.defaultNtpServer, ntpClient.defaultNtpPort, function (err, date) {
@@ -44,14 +44,17 @@
 
             // I won't test returned datetime against the system datetime
             // this is the whole purpose of NTP : putting clocks in sync.
-        });
-
-        // I'm pretty sure there is no NTP Server listening at google.com
-        ntpClient.getNetworkTime("google.com", 123, function (err, date) {
-            test.ok(err !== null);
-            test.ok(date === null);
-            test.equal(err, "Timeout waiting for NTP response.");
             test.done();
         });
+
+        exports.invalidNTPServer = function (test) {
+            // I'm pretty sure there is no NTP Server listening at google.com
+            ntpClient.getNetworkTime("google.com", 123, function (err, date) {
+                test.ok(err !== null);
+                test.ok(date === null);
+                test.equal(err, "Timeout waiting for NTP response.");
+                test.done();
+            });
+        };
     };
 }(exports));
