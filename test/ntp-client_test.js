@@ -25,17 +25,29 @@
 
     exports.setUp = function (done) {
         // setup here
+        ntpClient.ntpReplyTimeout = 5000; // Reducing timeout to avoid warnings.
         done();
     };
 
+    exports.invalidUsage = function (test) {
+        test.doesNotThrow(function () {
+            ntpClient.getNetworkTime(ntpClient.defaultNtpServer, ntpClient.defaultNtpPort);
+        });
+
+        test.done();
+    };
+
+    exports.notBitchyAboutSomeParameters = function (test) {
+        ntpClient.getNetworkTime(null, null, function (err, date) {
+            test.ok(date !== null);
+            test.done();
+        });
+    };
+
     exports.validNTPServer = function (test) {
-        ntpClient.ntpReplyTimeout = 5000; // Reducing timeout to avoid warnings.
-
         ntpClient.getNetworkTime(ntpClient.defaultNtpServer, ntpClient.defaultNtpPort, function (err, date) {
-            var now = new Date();
-
             console.log();
-            console.log("System reported : %s", now);
+            console.log("System reported : %s", new Date());
 
             test.ok(err === null);
             test.ok(date !== null);
