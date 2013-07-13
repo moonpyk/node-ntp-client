@@ -7,4 +7,5 @@ before_script:
   - npm install -g grunt-cli
 
 notifications:
-  email: false
+  on_success: never
+  on_failure: always
