@@ -19,6 +19,11 @@ ntpClient.getNetworkTime("pool.ntp.org", 123, function(err, date) {
 });
 ```
 
+## Contributors
+ * Clément Bourgeois (https://github.com/moonpyk)
+ * Callan Bryant (https://github.com/naggie)
+
 ## License
-Copyright (c) 2013 Clément Bourgeois  
+Copyright (c) 2014 Clément Bourgeois
 Licensed under the MIT license.
+
