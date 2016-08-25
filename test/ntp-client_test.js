@@ -66,7 +66,7 @@
         ntpClient.getNetworkTime("google.com", 123, function (err, date) {
             test.ok(err !== null);
             test.ok(date === null);
-            test.equal(err, "Timeout waiting for NTP response.");
+            test.equal(err.message, "Timeout waiting for NTP response.");
             test.done();
         });
     };
