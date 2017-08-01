@@ -1,21 +1,16 @@
-# ntp-client [![Build Status](https://secure.travis-ci.org/moonpyk/node-ntp-client.png?branch=master)](http://travis-ci.org/moonpyk/node-ntp-client)
+# ntp.js [![Build Status](https://travis-ci.org/ffflorian/ntp.js.svg?branch=master)](http://travis-ci.org/ffflorian/ntp.js)
 
-Pure Javascript implementation of the NTP Client Protocol
+Pure TypeScript implementation of the NTP Client Protocol. Based on [node-ntp-client](https://github.com/moonpyk/node-ntp-client).
 
 ## Getting Started
-Install the module with: `npm install ntp-client`
+Install the module with: `npm install ntp.js`
 
-```javascript
-var ntpClient = require('ntp-client');
+```ts
+import NTPClient from 'ntp.js';
 
-ntpClient.getNetworkTime("pool.ntp.org", 123, function(err, date) {
-    if(err) {
-        console.error(err);
-        return;
-    }
-
-    console.log("Current time : ");
-    console.log(date); // Mon Jul 08 2013 21:31:31 GMT+0200 (Paris, Madrid (heure d’été))
+NTPClient.getNetworkTime('pool.ntp.org', 123)
+  .then(date => console.log(date)}) // Tue Aug 01 2017 20:27:26 GMT+0200)
+  .catch(err => console.log(err));
 });
 ```
 
@@ -24,6 +19,5 @@ ntpClient.getNetworkTime("pool.ntp.org", 123, function(err, date) {
  * Callan Bryant (https://github.com/naggie)
 
 ## License
-Copyright (c) 2014 Clément Bourgeois
-Licensed under the MIT license.
-
+Copyright (c) 2017 Florian Keller,
+licensed under the MIT license.

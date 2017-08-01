@@ -1,10 +1,13 @@
+# http://docs.travis-ci.com/user/languages/javascript-with-nodejs/
 language: node_js
-
 node_js:
-  - "0.10"
-before_script:
-  - npm install -g grunt-cli
+  - "8"
+
+# https://blog.travis-ci.com/2013-12-05-speed-up-your-builds-cache-your-dependencies
+cache:
+  yarn: true
+  directories:
+    - "node_modules"
 
 notifications:
-  on_success: never
-  on_failure: always
+  email: false
