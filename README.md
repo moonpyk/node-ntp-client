@@ -1,12 +1,12 @@
-# ntp.js [![Build Status](https://travis-ci.org/ffflorian/ntp.js.svg?branch=master)](http://travis-ci.org/ffflorian/ntp.js)
+# NTPClient [![Build Status](https://travis-ci.org/ffflorian/ntp.js.svg?branch=master)](http://travis-ci.org/ffflorian/ntp.js)
 
 Pure TypeScript implementation of the NTP Client Protocol. Based on [node-ntp-client](https://github.com/moonpyk/node-ntp-client).
 
 ## Getting Started
-Install the module with: `npm install ntp.js`
+Install the module with: `npm install ntpclient`
 
 ```ts
-import NTPClient from 'ntp.js';
+import NTPClient from 'ntpclient';
 
 NTPClient.getNetworkTime('pool.ntp.org', 123)
   .then(date => console.log(date)}) // Tue Aug 01 2017 20:27:26 GMT+0200)
