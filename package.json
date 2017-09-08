@@ -2,7 +2,7 @@
   "author": "Florian Keller <github@floriankeller.de>",
   "bin": "bin/ntpclient",
   "dependencies": {
-    "@types/node": "8.0.26"
+    "@types/node": "8.0.28"
   },
   "devDependencies": {
     "jasmine": "2.8.0",
