@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+
+const NTP = require('../dist/commonjs/');
+
+new NTP()
+  .getNetworkTime()
+  .then(date => console.log(date))
+  .catch(err => console.error(err));

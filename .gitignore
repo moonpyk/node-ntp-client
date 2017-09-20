@@ -1,3 +1,7 @@
-*.sublime-workspace
-.idea
-node_modules/
+.yarnclean
+/.idea
+/bower_components
+/dist
+/node_modules
+/npm-debug.log*
+/package-lock.json
