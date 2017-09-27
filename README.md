@@ -1,6 +1,6 @@
 # react-native-ntp-client [![Build Status](https://secure.travis-ci.org/artem-russkikh/react-native-ntp-client.png?branch=master)](http://travis-ci.org/artem-russkikh/react-native-ntp-client)
 
-React Native compatible implementation of the NTP Client Protocol. Uses https://github.com/parshap/node-libs-react-native for `Buffer` shim. Uses https://github.com/tradle/react-native-udp for `dgram` shim.
+React Native compatible implementation of the NTP Client Protocol (https://github.com/moonpyk/node-ntp-client fork). Uses https://github.com/parshap/node-libs-react-native for `Buffer` shim. Uses https://github.com/tradle/react-native-udp for `dgram` shim.
 
 ## Getting Started
 Install the module with: `npm install react-native-ntp-client`
