@@ -1,7 +1,7 @@
 {
     "name": "react-native-ntp-client",
     "description": "React Native compatible implementation of the NTP Client Protocol",
-    "version": "0.5.3",
+    "version": "0.5.4",
     "homepage": "https://github.com/artem-russkikh/react-native-ntp-client",
     "author": {
         "name": "Clément Bourgeois",
