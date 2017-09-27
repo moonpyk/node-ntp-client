@@ -1,21 +1,24 @@
 {
-    "name": "ntp-client",
-    "description": "Pure Javascript implementation of the NTP Client Protocol",
+    "name": "react-native-ntp-client",
+    "description": "React Native compatible implementation of the NTP Client Protocol",
     "version": "0.5.3",
-    "homepage": "https://github.com/moonpyk/node-ntp-client",
+    "homepage": "https://github.com/artem-russkikh/react-native-ntp-client",
     "author": {
         "name": "Clément Bourgeois",
         "email": "moonpyk@gmail.com",
         "url": "http://www.moonpyk.net"
     },
+    "contributors": [
+        "Artem Russkikh <rusartx@gmail.com> (http://artem-russkikh.ru/)"
+    ],
     "repository": {
         "type": "git",
-        "url": "git://github.com/moonpyk/node-ntp-client.git"
+        "url": "git+https://github.com/artem-russkikh/react-native-ntp-client.git"
     },
     "licenses": [
         {
             "type": "MIT",
-            "url": "https://github.com/moonpyk/node-ntp-client/blob/master/LICENSE-MIT"
+            "url": "https://github.com/artem-russkikh/react-native-ntp-client/blob/master/LICENSE-MIT"
         }
     ],
     "main": "lib/ntp-client",
@@ -36,7 +39,15 @@
         "node-ntp-client": "bin/node-ntp-client"
     },
     "keywords": [
+        "react-native",
         "date",
         "ntp"
-    ]
+    ],
+    "dependencies": {
+        "node-libs-react-native": "1.0.1",
+        "react-native-udp": "2.1.0"
+    },
+    "browser": {
+      "dgram": "react-native-udp"
+    }
 }

@@ -1,12 +1,14 @@
-# ntp-client [![Build Status](https://secure.travis-ci.org/moonpyk/node-ntp-client.png?branch=master)](http://travis-ci.org/moonpyk/node-ntp-client)
+# react-native-ntp-client [![Build Status](https://secure.travis-ci.org/artem-russkikh/react-native-ntp-client.png?branch=master)](http://travis-ci.org/artem-russkikh/react-native-ntp-client)
 
-Pure Javascript implementation of the NTP Client Protocol
+React Native compatible implementation of the NTP Client Protocol. Uses https://github.com/parshap/node-libs-react-native for `Buffer` shim. Uses https://github.com/tradle/react-native-udp for `dgram` shim.
 
 ## Getting Started
-Install the module with: `npm install ntp-client`
+Install the module with: `npm install react-native-ntp-client`
+
+Link native dependencies of [react-native-udp](https://github.com/tradle/react-native-udp#install): `react-native link react-native-udp`
 
 ```javascript
-var ntpClient = require('ntp-client');
+var ntpClient = require('react-native-ntp-client');
 
 ntpClient.getNetworkTime("pool.ntp.org", 123, function(err, date) {
     if(err) {
@@ -22,6 +24,7 @@ ntpClient.getNetworkTime("pool.ntp.org", 123, function(err, date) {
 ## Contributors
  * Clément Bourgeois (https://github.com/moonpyk)
  * Callan Bryant (https://github.com/naggie)
+ * Artem Russkikh (https://github.com/artem-russkikh)
 
 ## License
 Copyright (c) 2014 Clément Bourgeois
