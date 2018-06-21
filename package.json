@@ -1,7 +1,7 @@
 {
     "name": "ntp-client",
     "description": "Pure Javascript implementation of the NTP Client Protocol",
-    "version": "0.5.3",
+    "version": "0.5.4",
     "homepage": "https://github.com/moonpyk/node-ntp-client",
     "author": {
         "name": "Clément Bourgeois",
