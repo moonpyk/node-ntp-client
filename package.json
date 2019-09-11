@@ -9,7 +9,8 @@
         "url": "http://www.moonpyk.net"
     },
     "contributors": [
-        "Artem Russkikh <rusartx@gmail.com> (http://artem-russkikh.ru/)"
+        "Artem Russkikh <rusartx@gmail.com> (http://artem-russkikh.ru/)",
+        "Info-Bit <dev@info-bit.com> (http://info-bit.com)"
     ],
     "repository": {
         "type": "git",
