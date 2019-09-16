@@ -1,7 +1,7 @@
 {
     "name": "react-native-ntp-client",
     "description": "React Native compatible implementation of the NTP Client Protocol",
-    "version": "0.5.5",
+    "version": "1.0.0",
     "homepage": "https://github.com/artem-russkikh/react-native-ntp-client",
     "author": {
         "name": "Clément Bourgeois",
@@ -9,7 +9,8 @@
         "url": "http://www.moonpyk.net"
     },
     "contributors": [
-        "Artem Russkikh <rusartx@gmail.com> (http://artem-russkikh.ru/)"
+        "Artem Russkikh <rusartx@gmail.com> (http://artem-russkikh.ru/)",
+        "Info-Bit <dev@info-bit.com> (http://info-bit.com)"
     ],
     "repository": {
         "type": "git",
@@ -44,8 +45,10 @@
         "ntp"
     ],
     "dependencies": {
-        "node-libs-react-native": "1.0.1",
-        "react-native-udp": "2.1.0"
+        "node-libs-react-native": "1.0.3"
+    },
+    "peerDependencies": {
+        "react-native-udp": "^2.6.1"
     },
     "browser": {
         "dgram": "react-native-udp"
